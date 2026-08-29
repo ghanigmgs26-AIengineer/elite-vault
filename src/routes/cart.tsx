@@ -85,11 +85,36 @@ function CartPage() {
             ))}
           </div>
 
-          <div className="mt-8 glass rounded-xl p-6">
-            <h2 className="text-2xl font-semibold">
-              Total: {formatINR(totalPrice)}
-            </h2>
-          </div>
+          <div className="mt-8 glass rounded-xl p-6 space-y-4">
+  <h2 className="text-2xl font-semibold">
+    Total: {formatINR(totalPrice)}
+  </h2>
+
+  <a
+    href={`https://wa.me/916366121895?text=${encodeURIComponent(
+      `Hello Elite Vault,
+
+I would like to order:
+
+${cart
+  .map(
+    (item) =>
+      `• ${item.brand} ${item.name}
+Quantity: ${item.quantity}
+Size: ${item.size || "N/A"}
+Price: ${formatINR(item.price)}`
+  )
+  .join("\n\n")}
+
+Total: ${formatINR(totalPrice)}`
+    )}`}
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center justify-center rounded-full bg-green-600 px-6 py-3 text-white"
+  >
+    Order Entire Cart on WhatsApp
+  </a>
+</div>
         </>
       )}
     </section>
