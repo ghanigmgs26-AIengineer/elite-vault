@@ -1,0 +1,68 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CMJfg0xS.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/admin",
+			"/cart",
+			"/contact",
+			"/footwear",
+			"/test",
+			"/watches",
+			"/product/$id"
+		],
+		preloads: ["/assets/index-CaU4AeFe.js", "/assets/jsx-runtime-Cltr0gcK.js"],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-CaU4AeFe.js"
+		} }]
+	},
+	"/": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/index.tsx",
+		children: void 0,
+		preloads: ["/assets/routes-BYk805nq.js", "/assets/ProductCard-BIB_-NHU.js"]
+	},
+	"/admin": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/admin.tsx",
+		children: void 0,
+		preloads: ["/assets/admin-D8e9tMuy.js", "/assets/supabase-Gjs9zMln.js"]
+	},
+	"/cart": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/cart.tsx",
+		children: void 0,
+		preloads: ["/assets/cart-B9uIUOoz.js"]
+	},
+	"/contact": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/contact.tsx",
+		children: void 0,
+		preloads: ["/assets/contact-DiHdpJsW.js"]
+	},
+	"/footwear": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/footwear.tsx",
+		children: void 0,
+		preloads: ["/assets/footwear-B0-Jgc9f.js", "/assets/CatalogView-BeRn8BKs.js"]
+	},
+	"/test": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/test.tsx",
+		children: void 0,
+		preloads: ["/assets/test-DzlAk13o.js", "/assets/supabase-Gjs9zMln.js"]
+	},
+	"/watches": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/watches.tsx",
+		children: void 0,
+		preloads: ["/assets/watches-CQtyQKC2.js", "/assets/CatalogView-BeRn8BKs.js"]
+	},
+	"/product/$id": {
+		filePath: "C:/Users/DELL/Desktop/Elite valut web/src/routes/product.$id.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/product._id-CKPDOSks.js",
+			"/assets/ProductCard-BIB_-NHU.js",
+			"/assets/product._id-Ddfku5dh.js"
+		]
+	}
+} });
+//#endregion
+export { tsrStartManifest };

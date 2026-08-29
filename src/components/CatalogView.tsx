@@ -1,9 +1,11 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
-import { formatINR, products, type Category } from "@/lib/products";
-
+import { products } from "@/lib/products";
+import { formatINR, type Category } from "@/lib/products";
+import { getProducts } from "@/lib/supabaseProducts";
 const MIN_PRICE = 500;
+
 const MAX_PRICE = 999;
 
 export function CatalogView({
@@ -17,10 +19,26 @@ export function CatalogView({
   title: string;
   intro: string;
 }) {
-  const items = useMemo(
-    () => products.filter((p) => p.category === category),
-    [category],
-  );
+  const [items, setItems] = useState<any[]>([]);
+
+useEffect(() => {
+  async function loadProducts() {
+    const dbProducts = await getProducts();
+
+    const mergedProducts = [
+      ...products,
+      ...dbProducts,
+    ];
+
+    setItems(
+      mergedProducts.filter(
+        (p) => p.category === category
+      )
+    );
+  }
+
+  loadProducts();
+}, [category]);
   const brands = useMemo(
     () => Array.from(new Set(items.map((p) => p.brand))).sort(),
     [items],

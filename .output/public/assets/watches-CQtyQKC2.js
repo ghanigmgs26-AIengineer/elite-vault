@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cltr0gcK.js";import{t}from"./CatalogView-BeRn8BKs.js";var n=e();function r(){return(0,n.jsx)(t,{category:`watches`,eyebrow:`Collection 01`,title:`Luxury Watches`,intro:`Skeleton tourbillons, gem-set Daytonas and rose gold Nautilus references. Each piece is reserved on request and confirmed personally over WhatsApp.`})}export{r as component};

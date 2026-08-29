@@ -1,0 +1,206 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/products-B9yV3G7s.js
+var products_default = [
+	{
+		"id": "WTC-001",
+		"name": "Cosmograph Daytona \"Artisans de Genève\" Skeleton",
+		"brand": "Rolex",
+		"category": "watches",
+		"price": 500,
+		"description": "Stainless steel case, custom skeletonized automatic movement, emerald-green gemstone bezel, steel Oyster bracelet.",
+		"image": "/products/wtc-001.jpg"
+	},
+	{
+		"id": "WTC-002",
+		"name": "Skeleton Tourbillon Full Baguette Diamond Edition",
+		"brand": "Velanthor",
+		"category": "watches",
+		"price": 580,
+		"description": "Tonneau-shaped case, fully iced-out with baguette-cut diamonds, rose gold inner bezel, open-work skeleton dial with exposed tourbillon cage.",
+		"image": "/products/wtc-002.jpg"
+	},
+	{
+		"id": "WTC-003",
+		"name": "Cosmograph Daytona Silver Dial / Oysterflex",
+		"brand": "Rolex",
+		"category": "watches",
+		"price": 650,
+		"description": "White gold/steel case, sunburst silver dial with black sub-dials (Panda style), black ceramic tachymeter bezel, black rubber Oysterflex strap.",
+		"image": "/products/wtc-003.jpg"
+	},
+	{
+		"id": "WTC-004",
+		"name": "Nautilus Chronograph Rose Gold",
+		"brand": "Patek Philippe",
+		"category": "watches",
+		"price": 720,
+		"description": "18k Rose gold case and bracelet, classic horizontal embossed dark dial, single sub-dial chronograph, date window at 3 o'clock.",
+		"image": "/products/wtc-004.jpg"
+	},
+	{
+		"id": "WTC-005",
+		"name": "Cosmograph Daytona \"Eye of the Tiger\" Gem-Set",
+		"brand": "Rolex",
+		"category": "watches",
+		"price": 790,
+		"description": "Yellow gold case, baguette diamond bezel, custom tiger-stripe gem-set dial with gold sub-dials, black rubber Oysterflex strap.",
+		"image": "/products/wtc-005.jpg"
+	},
+	{
+		"id": "WTC-006",
+		"name": "Datejust 36/41 Classic Black Dial",
+		"brand": "Rolex",
+		"category": "watches",
+		"price": 850,
+		"description": "Stainless steel case, fluted bezel, black sunburst dial with luminous index hour markers, stainless steel Jubilee bracelet.",
+		"image": "/products/wtc-006.jpg"
+	},
+	{
+		"id": "WTC-007",
+		"name": "Sky-Dweller Everose Gold / Black Dial",
+		"brand": "Rolex",
+		"category": "watches",
+		"price": 920,
+		"description": "Rose gold fluted bezel and case, black dial with off-center 24-hour ring, black rubber Oysterflex strap.",
+		"image": "/products/wtc-007.jpg"
+	},
+	{
+		"id": "WTC-008",
+		"name": "RM 47 \"Time of the Samurai\"",
+		"brand": "Richard Mille",
+		"category": "watches",
+		"price": 980,
+		"description": "Matte black carbon/ceramic tonneau case, hand-carved 3D gold and bronze Samurai armor motif integrated into the skeleton movement, black rubber strap.",
+		"image": "/products/wtc-008.jpg"
+	},
+	{
+		"id": "WTC-009",
+		"name": "Cosmograph Daytona Yellow Gold / Black Dial",
+		"brand": "Rolex",
+		"category": "watches",
+		"price": 999,
+		"description": "18k Yellow gold case, black dial with gold sub-dials, black ceramic tachymeter bezel, black rubber Oysterflex strap.",
+		"image": "/products/wtc-009.jpg"
+	},
+	{
+		"id": "SH-001",
+		"name": "Air Force 1 Low \"Triple Black / Red Tab\"",
+		"brand": "Nike",
+		"category": "footwear",
+		"price": 500,
+		"description": "Matte black leather upper, black midsole and outsole, tonal black Swoosh with red tongue and heel tab accents.",
+		"image": "/products/sh-001.jpg"
+	},
+	{
+		"id": "SH-002",
+		"name": "Minimalist Retro Court Sneakers (White / Green / Black)",
+		"brand": "Elite Vault",
+		"category": "footwear",
+		"price": 550,
+		"description": "White perforated leather upper, deep forest green overlays, side stripe detailing, thick white textured midsole.",
+		"image": "/products/sh-002.jpg"
+	},
+	{
+		"id": "SH-003",
+		"name": "Casual Low-Top Trainer (White / Black / Gum Sole)",
+		"brand": "Elite Vault",
+		"category": "footwear",
+		"price": 600,
+		"description": "White mesh upper, suede toe cap, side stripes, black heel tab, dark gum rubber sole.",
+		"image": "/products/sh-003.jpg"
+	},
+	{
+		"id": "SH-004",
+		"name": "T500 / 480 Skate Court (Blue / Cream)",
+		"brand": "New Balance",
+		"category": "footwear",
+		"price": 680,
+		"description": "Dusty blue suede overlays, off-white leather paneling, cream midsole, grey 'N' logo.",
+		"image": "/products/sh-004.jpg"
+	},
+	{
+		"id": "SH-005",
+		"name": "Jordan 1 Low x Travis Scott \"Velvet Brown / Olive\"",
+		"brand": "Air Jordan",
+		"category": "footwear",
+		"price": 750,
+		"description": "Mocha brown suede base, muted green panels, reverse dark brown Swoosh, off-white midsole.",
+		"image": "/products/sh-005.jpg"
+	},
+	{
+		"id": "SH-006",
+		"name": "Jordan 1 Low x The North Face Custom (UNC Blue / Sail)",
+		"brand": "Air Jordan",
+		"category": "footwear",
+		"price": 820,
+		"description": "Cream white leather base, powder blue overlays, dark blue oversized reverse Swoosh, \"The North Face\" branding on heel counter.",
+		"image": "/products/sh-006.jpg"
+	},
+	{
+		"id": "SH-007",
+		"name": "Jordan 4 Retro \"Midnight Navy\"",
+		"brand": "Air Jordan",
+		"category": "footwear",
+		"price": 880,
+		"description": "White tumbled leather upper, navy blue lace wings and eyelets, cement grey speckled midsole and wing flaps.",
+		"image": "/products/sh-007.jpg"
+	},
+	{
+		"id": "SH-008",
+		"name": "Jordan 1 High OG \"Dark Mocha\"",
+		"brand": "Air Jordan",
+		"category": "footwear",
+		"price": 940,
+		"description": "High-top silhouette, sail leather upper, black leather toe cap and overlays, dark brown suede heel collar.",
+		"image": "/products/sh-008.jpg"
+	},
+	{
+		"id": "SH-009",
+		"name": "Jordan 5 Retro \"Metallic Black\"",
+		"brand": "Air Jordan",
+		"category": "footwear",
+		"price": 999,
+		"description": "Premium black nubuck upper, translucent side netting, 3M reflective silver tongue, icy translucent blue outsole.",
+		"image": "/products/sh-009.jpg"
+	}
+];
+var WHATSAPP_NUMBER = "916366121895";
+var WHATSAPP_DISPLAY = "+91 63661 21895";
+var WATCH_SIZES = [
+	"36mm",
+	"40mm",
+	"42mm",
+	"44mm"
+];
+var SHOE_SIZES = [
+	"UK 6",
+	"UK 7",
+	"UK 8",
+	"UK 9",
+	"UK 10",
+	"UK 11"
+];
+/** Every product comes from src/data/products.json — no page component edits needed. */
+var products = products_default.map((p) => {
+	const category = p.category === "footwear" ? "footwear" : "watches";
+	return {
+		id: p.id,
+		name: p.name,
+		brand: p.brand,
+		category,
+		price: Number(p.price),
+		description: p.description,
+		image: p.image,
+		sizes: p.sizes ?? (category === "watches" ? WATCH_SIZES : SHOE_SIZES)
+	};
+});
+var formatINR = (value) => new Intl.NumberFormat("en-IN", {
+	style: "currency",
+	currency: "INR",
+	maximumFractionDigits: 0
+}).format(value);
+var getProduct = (id) => products.find((p) => p.id.toLowerCase() === id.toLowerCase());
+/** Direct wa.me link — no WhatsApp Business API, no keys. */
+var whatsappLink = (message) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+var orderLink = (product, size) => whatsappLink(`Hi, I am interested in ${product.name} priced at ₹${product.price}. Please share availability.` + (size ? `\nSize: ${size}` : ""));
+//#endregion
+export { products as a, orderLink as i, formatINR as n, whatsappLink as o, getProduct as r, WHATSAPP_DISPLAY as t };

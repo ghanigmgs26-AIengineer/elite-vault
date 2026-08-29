@@ -10,15 +10,22 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FootwearRouteImport } from './routes/footwear'
+import { Route as TestRouteImport } from './routes/test'
 import { Route as WatchesRouteImport } from './routes/watches'
 import { Route as ProductIdRouteImport } from './routes/product.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CartRoute = CartRouteImport.update({
@@ -36,6 +43,11 @@ const FootwearRoute = FootwearRouteImport.update({
   path: '/footwear',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TestRoute = TestRouteImport.update({
+  id: '/test',
+  path: '/test',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WatchesRoute = WatchesRouteImport.update({
   id: '/watches',
   path: '/watches',
@@ -49,50 +61,75 @@ const ProductIdRoute = ProductIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
   '/footwear': typeof FootwearRoute
+  '/test': typeof TestRoute
   '/watches': typeof WatchesRoute
   '/product/$id': typeof ProductIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
   '/footwear': typeof FootwearRoute
+  '/test': typeof TestRoute
   '/watches': typeof WatchesRoute
   '/product/$id': typeof ProductIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
   '/footwear': typeof FootwearRoute
+  '/test': typeof TestRoute
   '/watches': typeof WatchesRoute
   '/product/$id': typeof ProductIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/cart' | '/contact' | '/footwear' | '/watches' | '/product/$id'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cart' | '/contact' | '/footwear' | '/watches' | '/product/$id'
-  id:
-    | '__root__'
     | '/'
+    | '/admin'
     | '/cart'
     | '/contact'
     | '/footwear'
+    | '/test'
+    | '/watches'
+    | '/product/$id'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/admin'
+    | '/cart'
+    | '/contact'
+    | '/footwear'
+    | '/test'
+    | '/watches'
+    | '/product/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/cart'
+    | '/contact'
+    | '/footwear'
+    | '/test'
     | '/watches'
     | '/product/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
   CartRoute: typeof CartRoute
   ContactRoute: typeof ContactRoute
   FootwearRoute: typeof FootwearRoute
+  TestRoute: typeof TestRoute
   WatchesRoute: typeof WatchesRoute
   ProductIdRoute: typeof ProductIdRoute
 }
@@ -104,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cart': {
@@ -127,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FootwearRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/test': {
+      id: '/test'
+      path: '/test'
+      fullPath: '/test'
+      preLoaderRoute: typeof TestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/watches': {
       id: '/watches'
       path: '/watches'
@@ -146,9 +197,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
   CartRoute: CartRoute,
   ContactRoute: ContactRoute,
   FootwearRoute: FootwearRoute,
+  TestRoute: TestRoute,
   WatchesRoute: WatchesRoute,
   ProductIdRoute: ProductIdRoute,
 }

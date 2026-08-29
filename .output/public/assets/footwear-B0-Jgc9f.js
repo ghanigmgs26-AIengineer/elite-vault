@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cltr0gcK.js";import{t}from"./CatalogView-BeRn8BKs.js";var n=e();function r(){return(0,n.jsx)(t,{category:`footwear`,eyebrow:`Collection 02`,title:`Footwear & Sneakers`,intro:`Grail-tier silhouettes from Air Jordan, Nike and New Balance. Filter by brand, size and price, then reserve your pair on WhatsApp.`})}export{r as component};
