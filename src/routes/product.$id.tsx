@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowLeft, MessageCircle, ShieldCheck, Truck, BadgeCheck } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
+import { useCart } from "@/context/CartContext";
 import {
   WHATSAPP_DISPLAY,
   formatINR,
@@ -16,15 +17,24 @@ export const Route = createFileRoute("/product/$id")({
     if (!product) throw notFound();
     return { product };
   },
+
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Product not found | Elite Vault" }, { name: "robots", content: "noindex" }],
+        meta: [
+          { title: "Product not found | Elite Vault" },
+          { name: "robots", content: "noindex" },
+        ],
       };
     }
+
     const { product } = loaderData;
+
     const title = `${product.brand} ${product.name} | Elite Vault`;
-    const description = `${product.description} Available at ${formatINR(product.price)} — order on WhatsApp.`;
+    const description = `${product.description} Available at ${formatINR(
+      product.price
+    )} — order on WhatsApp.`;
+
     return {
       meta: [
         { title },
@@ -36,6 +46,7 @@ export const Route = createFileRoute("/product/$id")({
       ],
     };
   },
+
   notFoundComponent: ProductNotFound,
   component: ProductDetail,
 });
@@ -44,9 +55,11 @@ function ProductNotFound() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-28 text-center">
       <h1 className="font-display text-4xl">Piece unavailable</h1>
+
       <p className="mt-4 text-sm text-muted-foreground">
         This product is no longer in the vault.
       </p>
+
       <Link
         to="/watches"
         className="mt-8 inline-block rounded-full border border-gold/40 px-6 py-3 text-[10px] uppercase tracking-[0.2em] text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
@@ -60,6 +73,7 @@ function ProductNotFound() {
 function ProductDetail() {
   const { product } = Route.useLoaderData();
   const [size, setSize] = useState(product.sizes[0]);
+  const { addToCart } = useCart();
 
   const related = products
     .filter((p) => p.category === product.category && p.id !== product.id)
@@ -91,6 +105,7 @@ function ProductDetail() {
             <p className="text-[10px] uppercase tracking-luxe text-gold">
               {product.brand} · {product.id}
             </p>
+
             <h1 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
               {product.name}
             </h1>
@@ -100,12 +115,15 @@ function ProductDetail() {
             {formatINR(product.price)}
           </p>
 
-          <p className="text-sm leading-relaxed text-muted-foreground">{product.description}</p>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            {product.description}
+          </p>
 
           <div>
             <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               {product.category === "watches" ? "Case size" : "Select size"}
             </p>
+
             <div className="mt-3 flex flex-wrap gap-2">
               {product.sizes.map((s) => (
                 <button
@@ -124,15 +142,36 @@ function ProductDetail() {
             </div>
           </div>
 
-          <a
-            href={orderLink(product, size)}
-            target="_blank"
-            rel="noreferrer"
-            className="flex w-full items-center justify-center gap-3 rounded-full bg-whatsapp px-8 py-4 text-xs uppercase tracking-[0.2em] text-whatsapp-foreground transition-transform duration-300 hover:scale-[1.02]"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Order on WhatsApp
-          </a>
+          <div className="space-y-3">
+            <button
+              type="button"
+              onClick={() =>
+                addToCart({
+                  id: product.id,
+                  name: product.name,
+                  brand: product.brand,
+                  image: product.image,
+                  price: product.price,
+                  quantity: 1,
+                  size: size || "",
+                })
+              }
+              className="w-full rounded-full border border-gold px-8 py-4 text-xs uppercase tracking-[0.2em] text-gold transition-all hover:bg-gold hover:text-primary-foreground"
+            >
+              Add To Cart
+            </button>
+
+            <a
+              href={orderLink(product, size)}
+              target="_blank"
+              rel="noreferrer"
+              className="flex w-full items-center justify-center gap-3 rounded-full bg-whatsapp px-8 py-4 text-xs uppercase tracking-[0.2em] text-whatsapp-foreground transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Order on WhatsApp
+            </a>
+          </div>
+
           <p className="text-center text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             Orders confirmed at {WHATSAPP_DISPLAY}
           </p>
@@ -143,7 +182,10 @@ function ProductDetail() {
               { icon: ShieldCheck, label: "Secure handover" },
               { icon: Truck, label: "Pan-India delivery" },
             ].map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-2 text-xs text-muted-foreground">
+              <li
+                key={label}
+                className="flex items-center gap-2 text-xs text-muted-foreground"
+              >
                 <Icon className="h-4 w-4 text-gold" />
                 {label}
               </li>
@@ -155,6 +197,7 @@ function ProductDetail() {
       {related.length > 0 && (
         <section className="mt-20">
           <h2 className="font-display text-2xl">You may also like</h2>
+
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.id} product={p} index={i} />
