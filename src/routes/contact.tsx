@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Reach the Elite Vault concierge on WhatsApp at +91 63661 21895 for availability, pricing and delivery of luxury watches and sneakers.",
+          `Reach the Elite Vault concierge on WhatsApp at ${WHATSAPP_DISPLAY} for availability, pricing and delivery of luxury watches and sneakers.`,
       },
       { property: "og:title", content: "Contact | Elite Vault" },
       {
@@ -61,7 +61,7 @@ function ContactPage() {
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Rishi Kumar"
+              placeholder="Mr Ghani"
               className="w-full rounded-md border border-input bg-background/40 px-3 py-2.5 text-sm outline-none transition focus:border-gold focus:ring-2 focus:ring-ring"
             />
           </label>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCart } from "@/context/CartContext";
-import { formatINR } from "@/lib/products";
+import { formatINR, whatsappLink } from "@/lib/products";
 
 export const Route = createFileRoute("/cart")({
   component: CartPage,
@@ -91,7 +91,7 @@ function CartPage() {
   </h2>
 
   <a
-    href={`https://wa.me/916366121895?text=${encodeURIComponent(
+    href={whatsappLink(
       `Hello Elite Vault,
 
 I would like to order:
@@ -106,8 +106,8 @@ Price: ${formatINR(item.price)}`
   )
   .join("\n\n")}
 
-Total: ${formatINR(totalPrice)}`
-    )}`}
+Total: ${formatINR(totalPrice)}`,
+    )}
     target="_blank"
     rel="noreferrer"
     className="inline-flex items-center justify-center rounded-full bg-green-600 px-6 py-3 text-white"

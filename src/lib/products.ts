@@ -13,8 +13,8 @@ export type Product = {
   sizes: string[];
 };
 
-export const WHATSAPP_NUMBER = "916366121895";
-export const WHATSAPP_DISPLAY = "+91 63661 21895";
+export const WHATSAPP_NUMBER = "919972471716";
+export const WHATSAPP_DISPLAY = "+91 99724 71716";
 
 export const WATCH_SIZES = ["36mm", "40mm", "42mm", "44mm"];
 export const SHOE_SIZES = ["UK 6", "UK 7", "UK 8", "UK 9", "UK 10", "UK 11"];
